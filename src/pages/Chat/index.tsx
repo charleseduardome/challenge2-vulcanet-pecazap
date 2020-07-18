@@ -4,6 +4,7 @@ import SideBar from '../../components/SideBar';
 import ListIconsContacts from '../../components/ListIconsContacts';
 import HeaderChat from '../../components/HeaderChat';
 import ProfileCustomer from '../../components/ProfileCustomer';
+import InputChatWhatsapp from '../../components/InputChatWhatsapp';
 import { Container, Content } from './styles';
 
 const Chat: React.FC = () => {
@@ -14,6 +15,7 @@ const Chat: React.FC = () => {
 
       <Content>
         <HeaderChat />
+        <InputChatWhatsapp />
       </Content>
 
       <ProfileCustomer />
