@@ -14,19 +14,12 @@ interface ClientProps {
 
 const UsersList: React.FC = () => {
   const [clienteData, setClienteData] = useState<ClientProps[]>([]);
-  const [chatData, setChatData] = useState<ClientProps[]>([]);
 
   const history = useHistory();
 
   useEffect(() => {
     api.get('/customers').then(response => {
       setClienteData(response.data);
-    });
-  }, []);
-
-  useEffect(() => {
-    api.get('/chat').then(response => {
-      setChatData(response.data);
     });
   }, []);
 

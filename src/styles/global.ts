@@ -15,7 +15,7 @@ export default createGlobalStyle`
     height: 100vh;
     background: #3e9296 url(${backgroundImg}) no-repeat;
     background-position: left 0px bottom 80px;
-    background-size: 30%;
+    background-size: 25%;
     -webkit-font-smoothing: antialiased;
 
   }
