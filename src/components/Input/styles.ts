@@ -33,11 +33,10 @@ export const Container = styled.div<ContainerProps>`
     background: transparent;
     border: 0;
     color: #3e9296;
+    font-size: 16px;
+    margin: 0 20px;
     &::placeholder {
       color: #c7d7e2;
     }
-  }
-  svg {
-    margin-right: 16px;
   }
 `;

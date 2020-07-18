@@ -1,5 +1,5 @@
 import React, { useRef, useCallback } from 'react';
-import { FiLogIn, FiUser, FiLock } from 'react-icons/fi';
+import { FaUserAlt, FaLock, FaArrowRight } from 'react-icons/fa';
 import { Link, useHistory } from 'react-router-dom';
 import { FormHandles } from '@unform/core';
 import { Form } from '@unform/web';
@@ -27,16 +27,16 @@ const Login: React.FC = () => {
         <img src={mediasLogos} alt="Medias peçaZap" />
 
         <Form ref={formRef} onSubmit={handleSubmit}>
-          <Input name="username" icon={FiUser} placeholder="Usuário" />
+          <Input name="username" icon={FaUserAlt} placeholder="Usuário" />
 
           <Input
             name="password"
-            icon={FiLock}
+            icon={FaLock}
             type="password"
             placeholder="Senha"
           />
 
-          <Button icon={FiLogIn} type="submit">
+          <Button icon={FaArrowRight} type="submit">
             ENTRAR
           </Button>
 

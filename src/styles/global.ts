@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import backgroundImg from '../assets/background.svg';
 
 export default createGlobalStyle`
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
@@ -11,8 +12,12 @@ export default createGlobalStyle`
   }
 
   body {
-    background: #3e9296;
+    height: 100vh;
+    background: #3e9296 url(${backgroundImg}) no-repeat;
+    background-position: left 0px bottom 80px;
+    background-size: 30%;
     -webkit-font-smoothing: antialiased;
+
   }
   body, input, button {
     font-family: 'Lato', sans-serif;

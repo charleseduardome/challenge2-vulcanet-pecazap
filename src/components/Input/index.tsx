@@ -14,12 +14,14 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   name: string;
   containerStyle?: object;
   icon?: React.ComponentType<IconBaseProps>;
+  positionIcon?: string;
 }
 
 const Input: React.FC<InputProps> = ({
   name,
   containerStyle = {},
   icon: Icon,
+  positionIcon,
   ...rest
 }) => {
   const inputRef = useRef<HTMLInputElement>(null);
@@ -48,14 +50,29 @@ const Input: React.FC<InputProps> = ({
 
   return (
     <Container style={containerStyle} isFilled={isFilled} isFocused={isFocused}>
-      {Icon && <Icon size={20} />}
-      <input
-        onFocus={handleInputFocus}
-        onBlur={handleInputBlur}
-        defaultValue={defaultValue}
-        ref={inputRef}
-        {...rest}
-      />
+      {positionIcon === 'right' ? (
+        <>
+          <input
+            onFocus={handleInputFocus}
+            onBlur={handleInputBlur}
+            defaultValue={defaultValue}
+            ref={inputRef}
+            {...rest}
+          />
+          {Icon && <Icon size={16} />}
+        </>
+      ) : (
+        <>
+          {Icon && <Icon size={16} />}
+          <input
+            onFocus={handleInputFocus}
+            onBlur={handleInputBlur}
+            defaultValue={defaultValue}
+            ref={inputRef}
+            {...rest}
+          />
+        </>
+      )}
     </Container>
   );
 };
