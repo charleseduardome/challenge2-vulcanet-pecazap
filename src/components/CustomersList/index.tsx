@@ -12,7 +12,7 @@ interface ClientProps {
   company: string;
 }
 
-const UsersList: React.FC = () => {
+const CustomersList: React.FC = () => {
   const [clienteData, setClienteData] = useState<ClientProps[]>([]);
 
   const history = useHistory();
@@ -48,4 +48,4 @@ const UsersList: React.FC = () => {
   );
 };
 
-export default UsersList;
+export default CustomersList;

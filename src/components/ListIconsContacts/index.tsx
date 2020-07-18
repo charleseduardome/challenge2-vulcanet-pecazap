@@ -1,5 +1,4 @@
 import React from 'react';
-// import { useParams } from 'react-router-dom';
 
 import { FiPhoneCall } from 'react-icons/fi';
 import { FaWhatsapp, FaRegCalendarAlt } from 'react-icons/fa';
@@ -18,8 +17,6 @@ import {
 } from './styles';
 
 const ListIconsContacts: React.FC = () => {
-  // const { id } = useParams();
-
   return (
     <Container>
       <ButtonCalendar>

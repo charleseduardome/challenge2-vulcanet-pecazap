@@ -4,7 +4,7 @@ import { FormHandles } from '@unform/core';
 
 import api from '../../services/api';
 import Profile from '../../components/Profile';
-import UsersList from '../../components/UsersList';
+import CustomersList from '../../components/CustomersList';
 
 import logo from '../../assets/logo_white.svg';
 
@@ -16,7 +16,7 @@ interface IPerfil {
   company: string;
 }
 
-const Chat: React.FC = () => {
+const SideBar: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
   const [perfil, setPerfil] = useState<IPerfil>();
 
@@ -49,11 +49,11 @@ const Chat: React.FC = () => {
         <FaPlus size={25} />
       </div>
 
-      <UsersList />
+      <CustomersList />
 
       <img src={logo} alt="peçaZap" />
     </Container>
   );
 };
 
-export default Chat;
+export default SideBar;

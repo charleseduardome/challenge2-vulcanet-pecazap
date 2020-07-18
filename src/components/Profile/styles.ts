@@ -8,6 +8,11 @@ export const Container = styled.div`
   align-items: center;
   align-content: center;
   margin-top: 20px;
+  width: 100%;
+
+  div {
+    margin-left: 10px;
+  }
 `;
 
 export const ProfileImg = styled.img`
@@ -16,14 +21,12 @@ export const ProfileImg = styled.img`
   border-radius: 20px;
 `;
 export const ProfileName = styled.h1`
-  margin-left: 10px;
   font-weight: bold;
   font-size: 15px;
   line-height: 16px;
   color: #ffffff;
 `;
 export const ProfileCompany = styled.strong`
-  margin-left: 10px;
   margin-top: 3px;
   color: #ffffff;
   opacity: 0.7;

@@ -5,8 +5,8 @@ import { Form } from '@unform/web';
 import Input from '../../components/Input';
 
 export const Container = styled.div`
-  max-width: 310px;
-  margin-left: 20px;
+  width: 25%;
+  margin-left: 10px;
 
   > div {
     display: flex;
