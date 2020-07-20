@@ -1,9 +1,11 @@
 import React, { useState, useEffect, useCallback } from 'react';
 
+import { useDispatch } from 'react-redux';
+import * as CustomerActions from '../../store/modules/customers/actions';
+
 import { ContentClientList, ClienteInfo } from './styles';
 
 import api from '../../services/api';
-import { useHistory } from 'react-router-dom';
 
 interface ClientProps {
   id: number;
@@ -13,9 +15,8 @@ interface ClientProps {
 }
 
 const CustomersList: React.FC = () => {
+  const dispatch = useDispatch();
   const [clienteData, setClienteData] = useState<ClientProps[]>([]);
-
-  const history = useHistory();
 
   useEffect(() => {
     api.get('/customers').then(response => {
@@ -25,9 +26,9 @@ const CustomersList: React.FC = () => {
 
   const handleClick = useCallback(
     id => {
-      history.push(`/chat/${id}`);
+      dispatch(CustomerActions.ChooseCustumer(id));
     },
-    [history],
+    [dispatch],
   );
 
   return (

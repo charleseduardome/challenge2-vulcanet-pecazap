@@ -41,8 +41,8 @@ export const ButtonWhatapp = styled(Button)<ButtonProps>`
   padding: 20px;
 
   &:hover {
-    background: ${(props): string => (props.active ? '#f8fafc' : '#25d366')};
-    color: ${(props): string => (props.active ? '#25d366' : '#fff')};
+    background: #f8fafc;
+    color: #25d366;
   }
 `;
 
@@ -55,8 +55,8 @@ export const ButtonEmail = styled(Button)<ButtonProps>`
   padding: 20px;
 
   &:hover {
-    background: ${(props): string => (props.active ? '#f8fafc' : '#e33e1a')};
-    color: ${(props): string => (props.active ? '#e33e1a' : '#fff')};
+    background: #f8fafc;
+    color: #e33e1a;
   }
 `;
 

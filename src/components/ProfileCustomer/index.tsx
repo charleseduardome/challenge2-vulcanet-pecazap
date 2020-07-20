@@ -2,6 +2,10 @@ import React, { useState, useEffect, useCallback } from 'react';
 import moment from 'moment';
 import { MdEdit } from 'react-icons/md';
 import { FaTrashAlt } from 'react-icons/fa';
+
+import { useSelector } from 'react-redux';
+import { ApplicationState } from '../../store';
+
 import api from '../../services/api';
 import {
   Container,
@@ -43,13 +47,18 @@ interface IPerfilCustomer {
 }
 
 const ProfileCustomer: React.FC = () => {
+  const storeCustomer = useSelector(
+    (state: ApplicationState) => state.customers,
+  );
   const [perfilCustomer, setPerfilCustomer] = useState<IPerfilCustomer>();
 
   useEffect(() => {
-    api.get('/customers', { params: { id: 1 } }).then(response => {
-      setPerfilCustomer(response.data[0]);
-    });
-  }, []);
+    api
+      .get('/customers', { params: { id: storeCustomer.customerSelected } })
+      .then(response => {
+        setPerfilCustomer(response.data[0]);
+      });
+  }, [storeCustomer.customerSelected]);
 
   const dataConversation = useCallback(timestamp => {
     return moment.unix(timestamp).format('DD/MM/YYYY');

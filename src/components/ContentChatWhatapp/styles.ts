@@ -11,6 +11,17 @@ export const Container = styled.div`
   height: calc(100vh - 160px);
   background: #f5f8fa;
   border: 1px solid rgba(221, 221, 221, 0.3);
+
+  p {
+    margin: 10px;
+    color: #636466;
+    font-size: 15px;
+    line-height: 16px;
+    padding: 12px;
+    background: #dbf3f8;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 100px;
+  }
 `;
 
 export const TopStart = styled.div`
