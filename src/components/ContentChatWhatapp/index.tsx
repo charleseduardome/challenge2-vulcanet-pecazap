@@ -102,7 +102,7 @@ const ContentChatWhatapp: React.FC = () => {
 
           <ContentMessages>
             {chatData?.messages.map(msg => (
-              <>
+              <div key={msg.timestamp}>
                 <HeaderMessages type={msg.type}>
                   {msg.type === 'incoming' ? (
                     <>
@@ -125,7 +125,7 @@ const ContentChatWhatapp: React.FC = () => {
                   )}
                 </HeaderMessages>
                 <BodyMessages type={msg.type}>{msg.body}</BodyMessages>
-              </>
+              </div>
             ))}
           </ContentMessages>
         </>

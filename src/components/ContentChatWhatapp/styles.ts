@@ -61,6 +61,8 @@ export const ContentMessages = styled.div`
   overflow: auto;
   ::-webkit-scrollbar {
     width: 0px;
+    > div {
+    }
   }
 `;
 

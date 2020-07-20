@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
+import { useHistory } from 'react-router-dom';
 import { FiArrowRight } from 'react-icons/fi';
 import moment from 'moment';
 
@@ -30,6 +31,8 @@ const ContentChatWhatapp: React.FC = () => {
     (state: ApplicationState) => state.customers,
   );
 
+  const history = useHistory();
+
   const storeChannel = useSelector((state: ApplicationState) => state.contacts);
   const [emailData, setEmailData] = useState<IEmail[]>();
 
@@ -51,6 +54,13 @@ const ContentChatWhatapp: React.FC = () => {
     return moment.unix(timestamp).format('DD/MM/YYYY');
   }, []);
 
+  const handleEmail = useCallback(
+    id => {
+      history.push('/inbox');
+    },
+    [history],
+  );
+
   return (
     <Container>
       {!emailData ? (
@@ -66,7 +76,7 @@ const ContentChatWhatapp: React.FC = () => {
           <ContentMessages>
             {emailData?.map(email => (
               <>
-                <Email>
+                <Email onClick={() => handleEmail(email.id)}>
                   <strong>{email.subject}</strong>
                   <strong>{dataConversation(email.start)}</strong>
                   <strong>

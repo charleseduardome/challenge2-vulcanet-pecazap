@@ -9,6 +9,11 @@ export const Container = styled.div`
   align-content: center;
   margin-top: 20px;
   width: 100%;
+  background: none;
+
+  &:hover {
+    background: none;
+  }
 
   div {
     margin-left: 10px;

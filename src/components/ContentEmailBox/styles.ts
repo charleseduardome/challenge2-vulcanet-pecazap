@@ -1,8 +1,6 @@
 import styled from 'styled-components';
-
-interface IProps {
-  type?: string;
-}
+import { shade } from 'polished';
+import Button from '../../components/Button';
 
 export const Container = styled.div`
   display: flex;
@@ -40,14 +38,14 @@ export const TopStart = styled.div`
 `;
 
 export const ContentMessages = styled.div`
-  margin-top: 10px;
+  margin: 10px;
   overflow: auto;
   ::-webkit-scrollbar {
     width: 0px;
   }
 `;
 
-export const Email = styled.div<IProps>`
+export const Email = styled(Button)`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -55,15 +53,18 @@ export const Email = styled.div<IProps>`
   background: #fff;
   margin: 5px 10px;
 
+  &:hover {
+    background: ${shade(0.1, '#fff')};
+  }
+
   strong {
-    flex-grow: 1;
     font-weight: bold;
     font-size: 15px;
     color: #636466;
   }
 
   button {
-    margin-right: 10px;
+    margin-left: 10px;
     width: 20px;
     height: 20px;
     border-radius: 50%;
