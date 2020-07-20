@@ -9,6 +9,7 @@ interface ButtonProps {
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
+  position: relative;
   width: 65px;
   height: 100vh;
   margin-top: 10px;

@@ -14,6 +14,7 @@ export const ContentPerfil = styled.div`
   display: flex;
   margin-top: 20px;
   flex-direction: row;
+  margin-left: 10px;
   align-items: center;
 `;
 
@@ -44,6 +45,7 @@ export const ProfileCompany = styled.strong`
 export const ContentButtons = styled.div`
   display: flex;
   flex-direction: row;
+  margin-left: 10px;
 `;
 
 export const EditeProfileButton = styled(Button)`
@@ -76,6 +78,7 @@ export const DeleteProfileButton = styled(Button)`
 
 export const LastConversations = styled.div`
   margin-top: 20px;
+  margin-left: 10px;
 
   strong {
     font-weight: bold;
@@ -103,6 +106,7 @@ export const Comments = styled.div`
   flex-direction: column;
   margin-top: 40px;
   margin-right: 5px;
+  margin-left: 10px;
 
   strong {
     font-weight: bold;
@@ -118,7 +122,8 @@ export const Comments = styled.div`
 `;
 
 export const Contacts = styled.div`
-  margin-top: 40px;
+  margin-top: 20px;
+  margin-left: 10px;
 
   div {
     display: flex;
